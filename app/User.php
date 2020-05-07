@@ -28,6 +28,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function tasklists()
+    {
+        return $this->hasMany(task::class);
+    }
+
     /**
      * The attributes that should be cast to native types.
      *

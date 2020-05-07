@@ -8,8 +8,12 @@
             <td>{{ $task->id }}</td>
         </tr>
         <tr>
+            <th>タイトル</th>
+            <td>{{ $task->title }}</td>
+        </tr>
+        <tr>
             <th>メッセージ</th>
-            <td>{{ $task->content }}</td>
+            <td>{{ $task->content}}</td>
         </tr>
     </table>
     {!! link_to_route('task.edit', 'このメッセージを編集', ['task' => $task->id], ['class' => 'btn btn-light']) !!}
